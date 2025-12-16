@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bazaar 初學指南</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", "Segoe UI", Arial, sans-serif;
+            background: #281a00;
+            color: #e0e0e0;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255,215,0,0.5);
+        }
+        h2 {
+            color: #bb86fc;
+            border-bottom: 2px solid #bb86fc;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #a96eba;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+        b {
+            color: #ff7598;
+        }
+        .outborder{
+            border-collapse: collapse;
+            border: 3px solid rgb(255, 255, 255);
+            
+    }
+        /* 顏色標記 */
+        .poison { color: #025f02; font-weight: bold; }   /* 毒 - 綠 */
+        .burn  { color: #de480c; font-weight: bold; }   /* 火 - 橘 */
+        .haste { color: #0db1c7; font-weight: bold; }   /* 加速 - 淺藍 */
+        .slow  { color: #6e563e; font-weight: bold; }   /* 減速 - 灰 */
+        .freeze{ color: #0066ff; font-weight: bold; }   /* 冰/冰凍 - 深藍 */
+        .damage{ color: #d20000; font-weight: bold; }
+        .shield{ color: #f0f900; font-weight: bold; }
+        .flying{ color: #a6ab04; font-weight: bold; }
+        .heal{ color: #0fd105; font-weight: bold; }
+        .lifesteal{ color: #5f013e; font-weight: bold; }
+        .ammo{ color: #cb9c0e; font-weight: bold; }
+        
+        /* 讓整份文件更好看的小細節 */
+        code, pre {
+            background: #1e1e2e;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="./TheBazaarLogo.webp" width="1000" alt="">
+    <h1>The Bazaar 初學指南</h1>
+    <table class="outborder">
+        <tr><th><a href="#10">遊戲介紹</a></th></tr>
+        <tr><th><a href="#20">玩法講解</a></th></tr>
+        <tr><th></th><th><a href="#21">物品使用</a></th></tr>
+        <tr><th></th><th><a href="#22">物品等級</a></th></tr>
+        <tr><th></th><th><a href="#23">流程介紹</a></th></tr>
+        <tr><th></th><th><a href="#24">傷害類型</a></th></tr>
+        <tr><th></th><th><a href="#25">防禦類型</a></th></tr>
+        <tr><th></th><th><a href="#26">時間變因</a></th></tr>
+        <tr><th></th><th><a href="#27">其他效果</a></th></tr>
+        <tr><th><a href="#30">職業特色</a></th></tr>
+        <tr><th></th><th><a href="#Vanessa">Vanessa</a></th></tr>
+        <tr><th></th><th><a href="#Pygmalien">Pygmalien</a></th></tr>
+        <tr><th></th><th><a href="#Dooley">Dooley</a></th></tr>
+        <tr><th></th><th><a href="#Mak">Mak</a></th></tr>
+        <tr><th></th><th><a href="#Stelle">Stelle</a></th></tr>
+        <tr><th></th><th><a href="#Jules">Jules</a></th></tr>
+    </table>
+    
+    <h2 id="10">遊戲介紹</h2>
+    
+    <p>The Bazaar是一款由Tempo開發的roguelike自走棋遊戲，玩家必須在"聲望"耗盡前贏得10場戰鬥。為了達成這個目的，玩家可以利用從商店裡購買、探索地點與事件、擊敗怪物所掉落的道具與技能來打造自己的戰力。</p>
+    <br>
+    <p>玩家在經歷一天的隨機事件後會贏來一場戰鬥，在"聲望"從20點歸零或贏得10場戰鬥結束遊戲，第一天戰敗會損失一點聲望，第二天戰敗會損失兩點，以此類推。</p><img src="./bazaar-wallpaper-marketplace2-thumb.webp" height="500" alt="">
+
+    <h2 id="20">玩法講解</h2>
+    <h3 id="21">物品使用</h3>
+    <p>大致分為主動與被動物品，主動物品有充能條，充能滿會使用。被動物品沒有充能條，效果各異。</p>
+    <table>
+        <tr>
+            <th><img src="./cardDetails_langxian.webp" height="250" alt=""></th><th><img src="./Gemini_Generated_Image_2ihb4o2ihb4o2ihb-Photoroom.png" height="250" alt=""></th>
+        </tr>
+    </table>
+    <h3 id="22">物品等級</h3>
+    <p>通常物品分成4個等級，青銅、白銀、黃金、鑽石。兩個通級的相同物品會進化成下一階(直接加入背包的不會觸發進化)，每種物品的起始等級不同。傳說物品只有一個等級。</p>
+
+    <h3 id="23">流程介紹</h3>
+    <p>一天分成6個時段，開始時會獲得收入，前兩個時段會遇到事件三選一，其中一個必為商店，中間會遇到一次野怪，野怪會掉經驗值，一定要慎選，沒打過很虧，打完野會再接兩個商店，最後與其他玩家戰鬥，結束一天的流程。</p>
+    <table>
+        <tr>
+            <th><img src="./事件.png" height="250" alt=""></th><th><img src="./野怪.png" height="250" alt=""></th>
+        </tr>
+    </table>
+    <h3 id="24">傷害類型</h3>
+    <p><b><span class="damage">damage</span></b>(直接傷害)</p>
+    <p>就是傷害，打多少點對面扣多少血。</p>
+    <p><b><span class="poison">poison</span></b>(毒傷害)</p>
+    <p>每秒結算一次，造成對手身上中<span class="poison">毒</span>點數的傷害，無視護甲。</p>
+    <p><b><span class="burn">burn</span></b>(灼燒傷害)</p>
+    <p>每半秒結算一次，造成對手身上<span class="burn">火</span>點數的傷害，每次結算減少一點<span class="burn">火</span>。</p>
+
+    <h3 id="25">防守類型</h3>
+    <p><b><span class="heal">heal</span></b>(恢復)</p>
+    <p>回血，多少數值自己回多少血，並且減少回血量0.05倍的<span class="poison">毒</span>、<span class="burn">火</span>點數。</p>
+    <p><b><span class="shield">shield</span></b>(護甲)</p>
+    <p>就是護頓，多少數值疊多少甲，疊甲沒有上限</p>
+    <p><b><span class="heal">regen</span></b>(再生)</p>
+    <p>每秒結算一次，恢復自身<span class="heal">再生</span>點數的血量。</p>
+
+    <h3 id="26">時間變因</h3>
+    <p><b><span class="haste">haste</span></b>(加速)</p>
+    <p>被<span class="haste">加速</span>的物品充能速度變為2倍。</p>
+    <p><b><span class="slow">slow</span></b>(減速)</p>
+    <p>被<span class="slow">減速</span>的物品充能速度變為0.5倍。</p>
+    <p><b><span class="freeze">freeze</span></b>(冰凍)</p>
+    <p>被<span class="freeze">冰凍</span>的物品停止充能。</p>
+
+    <h3 id="27">其他效果</h3>
+    <p><b>enchant</b>(附魔)</p>
+    <p>為一個物品加入屬性，每件物品的附魔效果都不同，建議上how bazaar或bazaardb查詢。</p>
+    <img src="./附魔.png" height="300" alt="">
+    <p><b>transform</b>(轉換)</p>
+    <p>將一個物品換成等級、大小、附魔的自身職業物品。如果沒有辦法，會轉成等級更高的。傳說物品不可轉換。</p>
+    <img src="./transfore.png" height="230" alt="">
+    <p><b><span class="ammo">ammo</span></b>(彈藥)</p>
+    <p>具有彈藥的物品表示存在使用上限，彈藥用完就不會在使用。可使用<span class="ammo">reload</span>(填彈)恢復使用次數。</p>
+    <table>
+        <tr>
+            <th><img src="./填彈.png" height="300" alt=""></th><th><img src="./彈藥.png" height="300" alt=""></th>
+        </tr>
+    </table>
+    <p><b><span class="flying">flying</span></b>(飛行)</p>
+    <p><span class="flying">飛行</span>中的物品被<span class="slow">減速</span>或<span class="freeze">冰凍</span>的時間減半</p>
+    <img src="./飛行演示.png" height="300" alt="">
+    <p><b><span class="lifesteal">lifesteal</span></b>(吸血)</p>
+    <p>恢復等同於造成傷害的血量。</p>
+    <p><b></b></p>
+    <p><b>heat/chill</b>(加熱/冷卻)</p>
+    <p>在盤面上隨機生成，專門給廚師配合的。</p>
+    <img src="./videoframe_5801.png" height="300" alt="">
+
+    <h2 id="30">職業特色</h2>
+    <img src="./hero-carousel-VAN.webp" width="300" alt="">
+    <h3 id="Vanessa">Vanessa</h3>
+    <p>一名逃亡的海盜，心狠手辣，不計代價。有大量的<span class="ammo">彈藥</span></b>類武器、各式船隻、水產相關物品。遊戲特色為啟動速度快、主要圍繞著<span class="haste">加速</span>與<span class="slow">減速</span>做啟動與干擾，也有用大量武器壓垮對手的玩法，有不少獲得額外經驗的事件，常可以靠等級壓制對手。<span class="heal">恢復</span>物品較少。</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wjKxHrFvyl0?si=bLj0Qm63CHtaDSSs&amp;start=2735" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <img src="./hero-carousel-PYG.webp" width="300" alt="">
+    <h3 id="Pygmalien">Pygmalien</h3>
+    <p>一位野心勃勃的企業家，他平時或許十分友好，但並不妨礙他主宰the bazaar。物品主要與經濟、地產、奢侈品相關。啟動不快，在戰鬥中依靠超高的數值取勝，可以用大量的金錢交換數值，在大後期經濟起飛後無人能敵。有較多回復與<span class="shield">盾</span>的物品方便防守，完全沒有<span class="poison">毒</span>物品</p>
+    <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115503867822320&bvid=BV1dL2PBQEwa&cid=33768342717&p=1&t=3820&autoplay=0" height="315" width="560" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><br>
+    <img src="./hero-carousel-DOO.webp" width="300" alt="">
+    <h3 id="Dooley">Dooley</h3>
+    <p>可愛的小機器人。有許多高科技物品與機械朋友、在一次時空旅行後結交了不少恐龍夥伴。在遊戲中可從8種核心選一種遊玩，每一種核心都各具特色。玩法注重運轉，物品之間互相配合格外重要，通常依賴技能補足數值。是較為全面的角色。</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K884eP9JCbY?si=svV0BN5gyjOKs3vu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <img src="./hero-carousel-MAK.webp" width="300" alt="">
+    <h3 id="Mak">Mak</h3>
+    <p>在the bazaar中探詢真理的煉金術師，有著豐富的神祕學與藝術知識。擁有許多藥水與實驗器材，喜歡收集各式神秘的古物。玩法主要圍繞轉換與附魔來抽出強大的物品，也可以通過解任務的方式解鎖古物影藏的效果。是用<span class="poison">毒</span>的高手，完全沒有<span class="shield">盾</span>物品。</p>
+    <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115683031583594&bvid=BV1ka2CBVEiT&cid=34590297914&p=1&t=3333&autoplay=0" height="315" width="560" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><br>
+    <img src="./hero-carousel-STE.webp" width="300" alt="">
+    <h3 id="Stelle">Stelle</h3>
+    <p>一位天才技師，嚮往飛行，挑戰天空的極限。她發明了許多精密的器械、武器、飛行工具、載具與無人機，也有不少方便的小工具。玩法圍繞<span class="flying">飛行</span>做配合，對各種干擾的抗性較好，有著最優秀的摧毀玩法，大型物品全部黃金起步，可嘗試在前期轉換出，明確方向。</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VupvR7NJaQ0?si=LTq4Cfbxwxvl0AQZ&amp;start=22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <img src="./hero-carousel-JUL.webp" width="300" alt="">
+    <h3 id="Jules">Jules</h3>
+    <p>the bazaar 中人竟皆知的名廚，永遠不會停止精進自己的廚藝。物品大多為美味的食物或廚具。擁有獨特的冰火位機制，很考驗玩家的擺位，有大量的<span class="shield">盾</span>與<span class="heal">再生</span>，主要靠疊<span class="burn">火</span>輸出，<span class="freeze">冰凍</span>體系是目前最容易做到永凍的，也有廚具多武器流但不建議玩。完全沒有<span class="poison">毒</span>物品。</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3OaLPW0b63E?si=uncxweh4Z4g1d3jx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
